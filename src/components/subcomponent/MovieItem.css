@@ -1,0 +1,28 @@
+.row__post__container{
+    position: relative;
+}
+
+.row__poster{
+    max-width: 190px;
+    max-height: 258px;
+    cursor: pointer;
+    object-fit: cover;
+    margin-right: 13px;
+    transition: transform 600ms;
+}
+
+.row__poster:hover{
+    transform: scale(1.07);
+}
+
+.movie__item-rating{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.808);
+    display: flex;
+    align-items: center;
+    padding: .1rem;
+    font-size: smaller;
+    gap: .1rem;
+}
