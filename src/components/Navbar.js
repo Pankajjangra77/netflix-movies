@@ -11,11 +11,11 @@ function Navbar() {
         <>
         <div className="navbar">
         <div className="navbar__right">
-            <NavLink to="/">
+            <NavLink to="/netflix-movies">
              <img className="navbar__logo" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="netflix logo" />
             </NavLink>
         
-            <NavLink to="/" className="nav__links">
+            <NavLink to="/netflix-movies" className="nav__links">
                 Home
             </NavLink>
             <NavLink to="/tv-shows" className="nav__links">

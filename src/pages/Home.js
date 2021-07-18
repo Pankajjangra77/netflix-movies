@@ -19,10 +19,10 @@ const Home = ({ genres, setGenres }) => {
   return (
     <div>
       <Row allGenres={genres} id="popularMovies" title="POPULAR MOVIES" moviesUrl={requests.fetchMoviePopular} />
-      <Row allGenres={genres} id="trendingMovies" title="TRENDING MOVIES" moviesUrl={requests.fetchTrending} />
+      <Row allGenres={genres} id="topRatedMovies" title="TOP RATED MOVIES" moviesUrl={requests.fetchTopRated} />
       <Row allGenres={genres} id="topRatedTv" title="TOP RATED SHOWS" moviesUrl={requests.fetchTopRatedTv} />
       <Row allGenres={genres} id="documentries" title="Documentries" moviesUrl={requests.fetchDocumentries} />
-      <Row allGenres={genres} id="topRatedMovies" title="TOP RATED MOVIES" moviesUrl={requests.fetchTopRated} />
+      <Row allGenres={genres} id="trendingMovies" title="TRENDING MOVIES" moviesUrl={requests.fetchTrending} />
     </div>
   );
 }; 
