@@ -17,8 +17,8 @@ const TVShows = ({ genres, setGenres }) => {
   }, []);
   return (
     <div>
-      <Row allGenres={genres} id="netflixOriginals" title="NETFLIX ORIGINALS" moviesUrl={requests.fetchNetflixOriginals} />
       <Row allGenres={genres} id="popularTv" title="POPULAR TV SHOWS" moviesUrl={requests.fetchPopularTVShows} />
+      <Row allGenres={genres} id="netflixOriginals" title="NETFLIX ORIGINALS" moviesUrl={requests.fetchNetflixOriginals} />
       <Row allGenres={genres} id="topRated" title="TOP RATED SHOWS" moviesUrl={requests.fetchTopRatedTv} />
     </div>
   );

@@ -18,9 +18,9 @@ const Home = ({ genres, setGenres }) => {
   return (
     <div>
       <Row allGenres={genres} id="comedyMovies" title="COMEDY MOVIES" moviesUrl={requests.fetchComedyMovies} />
-      <Row allGenres={genres} id="actionMovies" title="ACTION MOVIES" moviesUrl={requests.fetchActionMovies} />
-      <Row allGenres={genres} id="romanticMovies" title="ROMANTIC MOVIES" moviesUrl={requests.fetchRomanceMovies} />
       <Row allGenres={genres} id="horrorMovies" title="HORROR MOVIES" moviesUrl={requests.fetchHorrorMovies} />
+      <Row allGenres={genres} id="romanticMovies" title="ROMANTIC MOVIES" moviesUrl={requests.fetchRomanceMovies} />
+      <Row allGenres={genres} id="actionMovies" title="ACTION MOVIES" moviesUrl={requests.fetchActionMovies} />
       <Row allGenres={genres} id="thrillerMovies" title="THRILLER MOVIES" moviesUrl={requests.fetchIndianMovies} />
     </div>
   );
