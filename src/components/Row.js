@@ -1,15 +1,12 @@
-
-import React, { useEffect, useState, useRef } from 'react';
-import { connect } from 'react-redux';
+import React, { useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import MovieItem from './subcomponent/MovieItem';
 import axios from '../axios';
 import { baseUrl } from '../request';
-import filterAction from '../redux/actions/filter';
 import './Row.css';
 
 function Row({
-  title, moviesUrl,filterParam , moviesFilter, id, allGenres,
+  title, moviesUrl, id, allGenres,
 }) {
   const [movies, setMovies] = useState(null);
   const [genres, setGenres] = useState([]);
@@ -41,17 +38,12 @@ function Row({
     }
   }, []);
 
-  const setMoviesToDisplay = () => {
-    return movies;
-  };
-
-  const allMovies = filterParam.toString() === '0' ? movies : setMoviesToDisplay();
   return (
     <div className="row">
       <section id={id}>
             <h2>{title}</h2>
         <div className="row__posters">
-          {allMovies?.map(({
+          {movies?.map(({
             id, imageUrl, name, overview, releaseDate, genreIds,rating
           }) => (
             <div key={id}>
@@ -76,8 +68,6 @@ function Row({
 Row.propTypes = {
   title: PropTypes.string.isRequired,
   moviesUrl: PropTypes.string.isRequired,
-  filterParam: PropTypes.number.isRequired,
-  moviesFilter: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
   rating:PropTypes.number,
   allGenres: PropTypes.arrayOf(PropTypes.shape({
@@ -86,12 +76,4 @@ Row.propTypes = {
   })).isRequired,
 };
 
-const mapStateToProps = state => ({
-  filterParam: state.filter,
-});
-
-const mapDispatchToProps = dispatch => ({
-  moviesFilter: param => dispatch(filterAction(param)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Row);
+export default Row;

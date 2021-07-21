@@ -13,7 +13,7 @@ export const ItemDetails = ({ movie, allGenres }) => {
 
   const history = useHistory();
   if (!movie || !Object.keys(movie).length) {
-    history.push('/');
+    history.goBack();
   }
   const {
     id, name, imgUrl, overview, releaseDate, rating, genres,

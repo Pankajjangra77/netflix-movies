@@ -23,19 +23,16 @@ export const MovieItem = ({
     <div className="row__post__container">
           <img  className="row__poster" src={imgUrl} alt="Movie Poster" onClick={handleClick} />
           <p className="movie__item-rating">
-          <StarIcon style={{"font-size": "17px" , "color": "orange"}}/>
+          <StarIcon style={{"fontSize": "17px" , "color": "orange"}}/>
           {rating}
           </p>
     </div>
   );
 };
 
-MovieItem.defaultProps = {
-  imgUrl: '',
-};
 
 MovieItem.propTypes = {
-  imgUrl: PropTypes.string,
+  imgUrl: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   setMovie: PropTypes.func.isRequired,
   id: PropTypes.number.isRequired,
